@@ -52,7 +52,9 @@ ul {
 a:hover {
   text-decoration: none;
 }
-
+Link{
+  text-decoration: none;
+}
 
 
 button {
@@ -102,18 +104,102 @@ select:focus {
 
 
    /* *************Navbar***************** */
+.navbar-toggler{
+ width: 40px;
+ height: 34px;
+
+ position: relative;
+ transition: .5s ease-in-out;
+}
+
+.navbar-toggler, .navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus{
+  outline: none;
+  box-shadow:none ;
+  border :0;
+}.navbar-toggler span{
+  margin: 0px; padding: 0px;
+
+}
+
+.toggler-icon {
+  display: block;
+  position: absolute;
+  height: 2px;
+  margin:20px ;
+  width: 95%;
+  align-items: center;
+  background: #3c3635;
+  border-radius: 1px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: .25s ease-in-out;
+}
+.middle-bar{
+  margin-top: 0px;
+
+}
+/* when clicked */
+.navbar-toggler .top-bar{
+  margin-top: 0px;
+  transform: rotate(135deg);
+}
+.navbar-toggler .middle-bar
+{
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+.navbar-toggler .bottom-bar{
+  margin-top: 0px;
+  transform: rotate(-135deg);
+}
+.navbar-toggler.collapsed .top-bar{
+margin-top: -20px;
+transform: rotate(0deg);
+}
+.navbar-toggler.collapsed .middle-bar
+{
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+.navbar-toggler.collapsed .bottom-bar
+{
+  margin-top:20px ;
+  transform: rotate(0deg);
+}
+
+
+#border{
+  color: black;
+}
+
    a#border:hover{
-    padding: 7.1px;
+    /* padding: 7.1px; */
     /* font-weight: 500; */
-    border-bottom: 2px solid #3c3635;
+   background-color: #3c3837;
+   border: 0px transparent;
+   border-radius: 7px;
+   color: white;
+   transition: .2s ease-in-out;
+    /* border-bottom: 2px solid #3c3635; */
    }
-   #toggle-btn{
+   /* #toggle-btn{
     background-color: #3c3635;
-    color: #c7baab;
+    color: #dd9a4d;
+   } */
+   .navbar-brand
+   {
+    font-size: 30px;
+    font-weight: 900;
+    letter-spacing: 4.8px;
+    line-height: 1;
+    color: #3c3635;
    }
    .header li
    {
-     margin-left: 15px;
+     margin-left: 19px;
      padding-left: 40px;
    }
    #navbar_top{
@@ -201,6 +287,10 @@ select:focus {
   }
 
   /* ************recent news***************** */
+  #div-recent-news
+  {
+    margin: 40px;
+  }
   .recent-news h2{
     font-size: 45px;
   font-weight: 700;
@@ -366,8 +456,65 @@ color: #c7baab;
 }
 
 
+/* SCROLL UP */
+.scrollup {
+  position: fixed;
+  right: 1rem;
+  bottom: -20%;
+  background-color:#3c3635;
+  opacity: 0.8;
+  /* padding: 0 0.3rem; */
+  padding: 5px;
+  border-radius: 0.5rem;
+  z-index: 10;
+  transition: 0.4s;
+}
 
-@media (max-width:480px){
+.scrollup:hover {
+  background-color: #c7baab;
+  color: #3c3635;
+
+}
+
+.bi {
+  font-size: 1.6rem;
+  color: white;
+  font-weight: 800;
+  
+}
+/* SHOW SCROLL BUTTON */
+.show-scroll {
+  bottom: 1.4rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:480px) {
   .header li
    {
      margin:5px;
@@ -375,6 +522,11 @@ color: #c7baab;
      
      border: 2px solid rgb(179, 177, 177);
      border-radius: 10px;
+   }
+   #div-recent-news
+   {
+    padding-top:20px;
+    margin:0px;
    }
   #Recent-news-cards{
     display: flex;
@@ -388,13 +540,13 @@ color: #c7baab;
   }
   #recent-news-title{
     align-items: center;
-    padding-right: 90px;
-    font-size: 35px;
+   
+    font-size: 38px;
   }
 
   #feat-pes-title
   {
-    font-size: 42px;
+    font-size: 38px;
   }
   #card-team
   {
@@ -410,4 +562,35 @@ color: #c7baab;
   #club-name {
     display: none;
   }
+  .art_img3{
+    width: 100px;
+  }
+}
+
+
+/* **************article*************** */
+.article div{
+background-color: #e7e4d4;
+color: #3c3635;
+margin-top: 30px;
+font-size: 20px;
+
+letter-spacing: 0.8px;
+line-height: 1.8em;
+}
+.article h4{
+  font-weight: 600;
+}
+.article h3{
+ padding-top: 30px;
+  font-weight: bold;
+}
+.art_img1{
+  width: 40%;
+}
+.art_img2{
+  width: 40%;
+}
+.art_img3{
+ width: 40%;
 }
