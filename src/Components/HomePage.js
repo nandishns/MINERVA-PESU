@@ -1,10 +1,20 @@
-import React from "react";
+import React,{useEffect} from "react";
+// importing aos
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import Carousel from "react-bootstrap/Carousel";
 import firstPic from "../assets/firstPic.jpg";
 import pic2 from "../assets/secPic.jpg";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
+import { Link } from "react-router-dom";
 export default function HomePage() {
+
+  useEffect(() => {
+    AOS.init(
+     {duration: 1200,}
+    );
+  }, [])
   return (
     <>
       <section className="carousel">
@@ -160,12 +170,23 @@ export default function HomePage() {
   </section>
 
       <section className="recent-news">
-        <div className="container text-center m-5">
-        <h2 className="h2 m-3 " id="recent-news-title"  data-aos="fade-up">
+        <div className="container text-center" id="div-recent-news">
+        <h2 className="h2  " id="recent-news-title"  data-aos="fade-up">
           Recent News{" "}
         </h2> </div>
-        <div className=" d-flex justify-content-around" id="Recent-news-cards"  data-aos="fade-up">
-          <Card style={{ width: "18rem" }}>
+        <div className=" d-flex justify-content-around" id="Recent-news-cards"  >
+          <Card style={{ width: "18rem" }} data-aos="fade-up">
+            <Card.Img variant="top" src="//placeimg.com/280/180/tech" />
+            <Card.Body>
+              <Card.Title>Card Title</Card.Title>
+              <Card.Text>
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </Card.Text> 
+            <Link to="/article"> <Button id="button-card"> Read More </Button> </Link> 
+            </Card.Body>
+          </Card>
+          <Card style={{ width: "18rem" }} data-aos="fade-up">
             <Card.Img variant="top" src="//placeimg.com/280/180/tech" />
             <Card.Body>
               <Card.Title>Card Title</Card.Title>
@@ -173,10 +194,10 @@ export default function HomePage() {
                 Some quick example text to build on the card title and make up
                 the bulk of the card's content.
               </Card.Text>
-              <Button id="button-card">Read More </Button>
+              <Link to="/article"> <Button id="button-card"> Read More </Button> </Link> 
             </Card.Body>
           </Card>
-          <Card style={{ width: "18rem" }}>
+          <Card style={{ width: "18rem" }} data-aos="fade-up">
             <Card.Img variant="top" src="//placeimg.com/280/180/tech" />
             <Card.Body>
               <Card.Title>Card Title</Card.Title>
@@ -184,21 +205,10 @@ export default function HomePage() {
                 Some quick example text to build on the card title and make up
                 the bulk of the card's content.
               </Card.Text>
-              <Button id="button-card">Read More </Button>
+              <Link to="/article"> <Button id="button-card"> Read More </Button> </Link> 
             </Card.Body>
           </Card>
-          <Card style={{ width: "18rem" }}>
-            <Card.Img variant="top" src="//placeimg.com/280/180/tech" />
-            <Card.Body>
-              <Card.Title>Card Title</Card.Title>
-              <Card.Text>
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
-              </Card.Text>
-              <Button id="button-card">Read More </Button>
-            </Card.Body>
-          </Card>
-          <Card style={{ width: "18rem" }}>
+          <Card style={{ width: "18rem" }} data-aos="fade-up">
             <Card.Img variant="top" src="//placeimg.com/280/180/tech" />
             <Card.Body>
               <Card.Title>Card Title</Card.Title>
@@ -218,12 +228,12 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="featuring-pes">
-      <div className="container text-center ">
-        <h2 className="h2 m-3" id="feat-pes-title">
+      <section className="featuring-pes" id="featuring-pes">
+      <div className="container text-center " >
+        <h2 className="h2 m-3" id="feat-pes-title" data-aos="fade-up">
          Featuring PES
         </h2> </div>
-        <Carousel fade>
+        <Carousel fade data-aos="fade-up">
           <Carousel.Item interval={2000}>
             <img
               className="d-block w-100"
@@ -329,7 +339,7 @@ export default function HomePage() {
         </article>
       </section>
 
-      <section className="about-us"  data-aos="fade-up">
+      <section className="about-us"  id="about-us" data-aos="fade-up">
         <div
           className="container border border-1 rounded"
           style={{ background: "#e7e4d4", color: "#3c3635" }}
@@ -401,11 +411,11 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="our-team">
-      <>
+      <section className="our-team" id="our-team">
+      
   <div className="container mt-5 mb-5 text-center  ">
     <h1 className="h1 p-2  m-2" data-aos="fade-up">
-      {" "}
+      
       Our Team
     </h1>
   </div>
@@ -439,7 +449,7 @@ export default function HomePage() {
       </div>
     </div>
   </div>
-</>
+
 
       </section>
 
@@ -553,7 +563,8 @@ export default function HomePage() {
     </div>
   </div>
 </section>
-
-    </>
+ </>
+    
   );
+ 
 }
