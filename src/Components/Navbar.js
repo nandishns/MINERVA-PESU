@@ -1,5 +1,6 @@
 import React from 'react'
 import NavLogo from "../assets/top-logo.png"
+import { Link } from 'react-router-dom'
 export default function Navbar() {
   return (
     <>
@@ -13,9 +14,9 @@ export default function Navbar() {
     id="navbar_top"
   >
     <div className="container-fluid">
-      {/* <a class="navbar-brand" href="#">Navbar</a> */}
+      <a class="navbar-brand" href="#">MINERVA</a>
       <button
-        className="navbar-toggler bg-light "
+        className="navbar-toggler collapsed d-flex d-lg-none flex-column justify-content-around "
         type="button"
         id='toggle-btn'
         data-bs-toggle="collapse"
@@ -24,56 +25,58 @@ export default function Navbar() {
         aria-expanded="false"
         aria-label="Toggle navigation"
       >
-        <span className="navbar-toggler-icon " />
+        <span className="toggler-icon top-bar " />
+        <span className="toggler-icon middle-bar " />
+        <span className="toggler-icon bottom-bar " />
       </button>
       <div className="collapse navbar-collapse" id="navbarSupportedContent" >
         <ul className="navbar-nav me-auto mb-2 p-2  mb-lg-0">
           <li className="nav-item ms-1">
-            <a
-              className="nav-link active text-dark "
+            <Link
+              className="nav-link active  "
               aria-current="page"
               id='border'
-              href="/"
+              to="/"
             >
             
               Home
-            </a>
+            </Link>
           </li>
           <li className="nav-item">
-            <a className="nav-link text-dark " id='border' href="#">
+            <a className="nav-link  " id='border' href="#timeline">
               Our Timelines
             </a>
           </li>
           <li className="nav-item">
-            <a className="nav-link text-dark"  id='border' href="#timeline">
+            <a className="nav-link "  id='border' href="#">
               News
             </a>
           </li>
           <li className="nav-item">
-            <a className="nav-link text-dark" id='border'  href="#">
+            <a className="nav-link " id='border'  href="#featuring-pes">
               Featuring PES
             </a>
           </li>
           <li className="nav-item">
-            <a className="nav-link text-dark" id='border'  href="#">
+            <a className="nav-link " id='border'  href="#about-us">
               About Us
             </a>
           </li>
           <li className="nav-item">
-            <a className="nav-link text-dark" id='border'  href="#">
+            <a className="nav-link" id='border'  href="#our-team">
               Our Team
             </a>
           </li>
           <li className="nav-item ">
-            <a className="nav-link text-dark" id='border'  href="#">
+            <a className="nav-link " id='border'  href="#contact-us">
               Feedback
             </a>
           </li>
-          <li className="nav-item ">
+          {/* <li className="nav-item ">
             <a className="nav-link text-dark" id='border'  href="#">
               Login
             </a>
-          </li>
+          </li> */}
         </ul>
       </div>
     </div>
