@@ -85,7 +85,7 @@ export default function HomePage() {
                         data-aos="fade-right"
                        
                       >
-                        3 June
+                        20 Jan
                       </div>
                       <h5 className="font-size-16">Event One</h5>
                       <p className="text-muted">
@@ -105,7 +105,7 @@ export default function HomePage() {
                         className="event-date bg-soft-success text-white"
                         data-aos="fade-right"
                       >
-                        5 June
+                        23 Jan
                       </div>
                       <h5 className="font-size-16">Event Two</h5>
                       <p className="text-muted">
@@ -125,7 +125,7 @@ export default function HomePage() {
                         className="event-date bg-soft-danger text-white"
                         data-aos="fade-right"
                       >
-                        7 June
+                        25 Jan
                       </div>
                       <h5 className="font-size-16">Event Three</h5>
                       <p className="text-muted">
@@ -145,7 +145,7 @@ export default function HomePage() {
                         className="event-date bg-soft-warning text-white"
                         data-aos="fade-right"
                       >
-                        8 June
+                        30 Jan
                       </div>
                       <h5 className="font-size-16">Event Four</h5>
                       <p className="text-muted">
@@ -172,16 +172,17 @@ export default function HomePage() {
       <section className="recent-news">
         <div className="container text-center" id="div-recent-news">
         <h2 className="h2  " id="recent-news-title"  data-aos="fade-up">
-          Recent News{" "}
+          Recent Articles{" "}
         </h2> </div>
         <div className=" d-flex justify-content-around" id="Recent-news-cards"  >
           <Card style={{ width: "18rem" }} data-aos="fade-up">
             <Card.Img variant="top" src="//placeimg.com/280/180/tech" />
             <Card.Body>
-              <Card.Title>Card Title</Card.Title>
+              <Card.Title>Susan Meachen</Card.Title>
               <Card.Text>
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
+              A blur between plot twists in books and real life? <br />
+Susan Meachen, a romance author fakes suicide 
+
               </Card.Text> 
             <Link to="/article"> <Button id="button-card"> Read More </Button> </Link> 
             </Card.Body>
