@@ -8,10 +8,12 @@ export default function Article() {
     <>
       <section className="article">
         <div className="container border border-rounded">
-            <div className="container">
-          <h3 className=" h3">A blur between plot twists in books and real life?</h3>
-          <i>Susan Meachen, a romance author fakes suicide</i>
-          <p>- Janani Naresh Kuma</p> <br />
+          <div className="container">
+            <h3 className=" h3">
+              A blur between plot twists in books and real life?
+            </h3>
+            <i>Susan Meachen, a romance author fakes suicide</i>
+            <p>- Janani Naresh Kuma</p> <br />
           </div>
           <article>
             <div className="container m-2">
@@ -75,7 +77,7 @@ export default function Article() {
               </p>
             </div>
             <div className="img">
-              <img src={Art1_Img1} alt="" className="art_img1"  />
+              <img src={Art1_Img1} alt="" className="art_img1" />
             </div>
             <div className="container">
               <h4>Responses now:</h4>
@@ -88,7 +90,7 @@ export default function Article() {
               </p>
             </div>
             <div className="art_img">
-              <img src={Art1_Img2} alt="" className="art_img2"/>
+              <img src={Art1_Img2} alt="" className="art_img2" />
             </div>
             <p className="mt-3">
               {" "}
@@ -97,7 +99,7 @@ export default function Article() {
               for her betrayal and lack of morals.
             </p>
             <div className="art_img">
-              <img src={Art1_Img3} alt="" className="art_img3"/>
+              <img src={Art1_Img3} alt="" className="art_img3" />
             </div>
             <p className="mt-3">
               The online disappearance and reappearance is being viewed by some
@@ -105,20 +107,36 @@ export default function Article() {
               about her reappearance but to no avail.
             </p>
             <div className="container ">
-                <h4>Credits:</h4>
+              <h4>Credits:</h4>
+              <div className="container">
                 <ul>
-                    <li>
-                        <span> Dailymail: <a href="https://www.dailymail.co.uk/news/article-11635707/Author-Susan-Meachen-faked-death-left-red-flags-alive-editor-claims.html">https://www.dailymail.co.uk/news/article-11635707/Author-Susan-Meachen-faked-death-left-red-flags-alive-editor-claims.html</a></span>
-                    </li>
-                    <li>
-                        <span> BBC: <a href="https://www.bbc.com/news/world-us-canada-64179548?xtor=AL-72-%5Bpartner%5D-%5Bbbc.news.twitter%5D-%5Bheadline%5D-%5Bnews%5D-%5Bbizdev%5D-%5Bisapi%5D&at_link_id=338CD14E-8F38-11ED-85E3-497B0EDC252D&at_bbc_team=editorial&at_ptr_name=twitter&at_link_origin=BBCWorld&at_format=link&at_link_type=web_link&at_campaign=Social_Flow&at_medium=social&at_campaign_type=owned
-">https://www.bbc.com/news/world-us-canada-64179548?xtor=AL-72-%5Bpartner%5D-%5Bbbc.news.twitter%5D-%5Bheadline%5D-%5Bnews%5D-%5Bbizdev%5D-%5Bisapi%5D&at_link_id=338CD14E-8F38-11ED-85E3-497B0EDC252D&at_bbc_team=editorial&at_ptr_name=twitter&at_link_origin=BBCWorld&at_format=link&at_ <br /> link_type=web_link&at_campaign=Social_Flow&at_medium=social&at_campaign_type=owned
-</a></span>
-                    </li>
-                    <li>
-                        Dazed : <a href="https://www.dazeddigital.com/life-culture/article/57888/1/susan-meachen-author-faked-her-own-death-suicide-hoax-facebook">https://www.dazeddigital.com/life-culture/article/57888/1/susan-meachen-author-faked-her-own-death-suicide-hoax-facebook</a>
-                    </li>
+                  <li>
+                    <span>
+                      {" "}
+                      Dailymail:{" "}
+                      <a href="https://www.dailymail.co.uk/news/article-11635707/Author-Susan-Meachen-faked-death-left-red-flags-alive-editor-claims.html">
+                        Click here
+                      </a>
+                    </span>
+                  </li>
+                  <li>
+                    <span>
+                      {" "}
+                      BBC:{" "}
+                      <a
+                        href="https://www.bbc.com/news/world-us-canada-64179548?xtor=AL-72-%5Bpartner%5D-%5Bbbc.news.twitter%5D-%5Bheadline%5D-%5Bnews%5D-%5Bbizdev%5D-%5Bisapi%5D&at_link_id=338CD14E-8F38-11ED-85E3-497B0EDC252D&at_bbc_team=editorial&at_ptr_name=twitter&at_link_origin=BBCWorld&at_format=link&at_link_type=web_link&at_campaign=Social_Flow&at_medium=social&at_campaign_type=owned"
+  >
+                        Click here
+                      </a>
+                    </span>
+                  </li>
+                  <li>
+                    Dazed :{" "}
+                    <a href="https://www.dazeddigital.com/life-culture/article/57888/1/susan-meachen-author-faked-her-own-death-suicide-hoax-facebook">
+                    Click here. </a>
+                  </li>
                 </ul>
+              </div>
             </div>
           </article>
         </div>
@@ -126,7 +144,3 @@ export default function Article() {
     </>
   );
 }
-
-
-
-
